@@ -1,6 +1,6 @@
 <?php
 
-class Blog {
+class BlogModel {
     private $conn;
 
     public function __construct($host, $username, $password, $database) {
@@ -9,7 +9,6 @@ class Blog {
             die("Connection failed: " . $this->conn->connect_error);
         }
     }
-    
 
     public function getPosts() {
         $sql = "SELECT * FROM posts";
